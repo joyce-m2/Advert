@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <style>
+            body{
+    background-image: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUSEhIVFRUVFRcVFRUVFRUVFRUVFRUWFhUVFRcYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDQ0NFQ8PFSsZFRkrKy0tKystKy0tLTcrLS03Kzc3NzctNy0rLTc3Ky0tKy0tNy03LSstKzc3Kys3KystK//AABEIAOEA4QMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQIH/8QAIRABAQEAAQMEAwAAAAAAAAAAAAERAhJBYSFRgcExcZH/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDjHJFrIwtQwAAwCFJSwAoaAICroQoiUWoKLEoCiVRCLqYoIFqgmDRYCasSEBQAZFoCCoCKUFChBAsABBRQwBEU5IKVYakBQAUgCBiKCwpEtAWJhoLoAIioChoCBTQFSU0A0KCEhgKuFNUEqRUwRTsiigEBYEBBABRFBUUBMirigxqKUBFNBDAAEUCIqUCACkUALUVKItpE1QBQCIuFBCRUwDVhIoGhFgJ6ewmUAKYgKIoM04qAkVNXAXfVmrCgkWIsAi1DQKi6gClBUrSSAiiys2gqKUBdSKBpI10saC9XITpAImELAIupCgBoCBiwEUSiippBFoSLgJiVUBYUBVAgglaqUEAgLixNJQXWbWoUGBcgCypYsSgAsoJA1KBqxFgBYSlAkWRCAsVKloGlQgKRMWAqxlQVKWmAFQBQoCynYwyggmAKcjQDBJTQIlVLAUhqQVrUAQwTVAikLQRFMAlNAFwNADQBCqAjUTAFRYgJn7DfM/gABQAgC4ixKCYupi4BIUKCLKmrBVgQETknZrEwEimLgGiLAWWz8fFQsATRQAgaBSkWAzgbQCKgBoACVaAi6igJY0yAsTFFUSKIlqpSgESLBVxYzFENBMAKFFVF0gipAwD4ABNKaAigC1FQEFpBQNNBFxFAwrTIgAAQkAUTGgQEwDAICwDAJAMAwXAGdDTQBFAotQEtVFopqVUtAWM41ADSFERUBVAtEXAAVE1rQZFAKSnIgLEqsgvUJgBS00AxUIC1ClgGiUwFpTS0ExqMxqAhVQE1YAARQSKLASItQBcRQCBgLqVUBBVBiQCgsAgFKuoCGlAABTFiKBEqlETBTBQhARaaRaCIuGgVNJVARQFRZUoG+RM8AIgA1AEFjPLsCi1IANcWQBeRQAKgC0AAAFigCU5gBx+z3AGYtAUAEABX/9k=");
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+}
+        </style>
+        <title>Loading...</title>
+        <link rel="stylesheet" href="style1.css">
+    </head>
+    <body>
+        <h2 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color:white;background-color: black; font-size: 20px; letter-spacing: 5px;position: relative;left:20px;" >Few more seconds....</h2>
+        <img src="loading.png" alt="Example Image" id="image2" style="display:block; margin: auto;">
+        <form action="java.html">
+        <div id="button-container"> 
+            <button type="submit" style="font-size:20px;position: relative;top:-100px;font-family:'Courier New', Courier, monospace;font-weight: 400;opacity:0.8;" >Continue...</button>
+        </div>
+        </form>
+        <script>
+            setTimeout(function() {
+                document.getElementById("button-container").style.display = "block";
+            }, 3000); // 5000 milliseconds = 5 seconds
+        </script>
+        
+    </body>
+</html>

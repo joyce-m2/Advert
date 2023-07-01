@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body{
+background-image: url("https://images.unsplash.com/photo-1564403848767-9db2a39c65aa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDF8fGFlc3RoZXRpY3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60");
+background-size: cover;
+background-repeat: no-repeat;
+
+}
+</style>
+	<title>Booking Form</title>
+  
+	<script>
+		function validateEmail() {
+			var email = document.getElementById("email").value;
+			var regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+			var message = document.getElementById("email-message");
+			if (regex.test(email)) {
+				message.innerHTML = "";
+				return true;
+			} else {
+				message.innerHTML = "Invalid email address!";
+				return false;
+			}
+		}
+		function validateFname() {
+			var fname = document.getElementById("fname").value;
+			var regex = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/;
+			var message = document.getElementById("fname-message");
+			if (regex.test(fname)) {
+				message.innerHTML = "";
+				return true;
+			} else {
+				message.innerHTML = "Invalid name!";
+				return false;
+			}
+		}
+
+		function validateMobile() {
+			var mobile = document.getElementById("mobile").value;
+			var regex = /^\+\d{1,3}\d{9}$/;
+			var message = document.getElementById("mobile-message");
+			if (regex.test(mobile)) {
+				message.innerHTML = "";
+				return true;
+			} else {
+				message.innerHTML = "Invalid mobile number!";
+				return false;
+			}
+		}
+
+		function validateForm() {
+			var emailValid = validateEmail();
+			var mobileValid = validateMobile();
+			var fnameValid=validateFname();
+			if (emailValid && mobileValid&&fnameValid) {
+				alert("Form submitted successfully");
+			} else {
+				alert("Please correct the errors in the form");
+			}
+		}
+		function displayPrice() {
+  const product = document.getElementById("service").value;
+  let price;
+
+  if (product === "100") {
+    price = 299;
+  } else if (product === "250") {
+    price = 349;
+  } else if (product === "500") {
+    price = 499;
+  } else {
+    const priceElement = document.getElementById("price");
+    priceElement.innerHTML = "";
+    return;
+  }
+
+  const priceElement = document.getElementById("price");
+  priceElement.innerHTML = `Price: $${price}`;
+}
+function storeData() {
+  const fn = document.getElementById("fname").value;
+ sessionStorage.setItem("fname", fn);
+  const mail = document.getElementById("email").value;
+  sessionStorage.setItem("email", mail);
+  const phone = document.getElementById("mobile").value;
+ sessionStorage.setItem("mobile", phone);
+  const home = document.getElementById("address").value;
+  sessionStorage.setItem("address", home);
+  const day = document.getElementById("date").value;
+  sessionStorage.setItem("date", day);
+  const prod = document.getElementById("product").value;
+  sessionStorage.setItem("product", prod);
+  const pay = document.getElementById("price").value;
+  sessionStorage.setItem("pay",price);
+  
+  window.location.href = "order_success.html";
+}
+
+		 var today = new Date();
+	</script>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+	<h3>
+        Screen Co.
+       </h3><br>
+	<h5>Please fill the required details</h5>
+	 <div class="signup">
+		<form action="order_success.html" id="sign">
+			<label for="fname">Name:</label><br>
+		
+		<input type="text" id="fname" placeholder="Enter your name" onblur="validateFname()">
+		<span id="fname-message"></span><br>
+			<label for="email">Email ID:</label><br>
+		<input type="email" id="email" name="uemail" placeholder="Enter your email id" onblur="validateEmail()">
+		<span id="email-message"></span>
+		<br>
+		<label for="mobile">Mobile/Phone No:</label><br>
+		<input type="text" id="mobile" placeholder="Enter your mobile number" onblur="validateMobile()">
+		<span id="mobile-message"></span>
+		<br>
+		<label for="address">Home Address:</label><br>
+		<input type="text" id="address" placeholder="Enter your address" onblur="validateAddress()">
+		<span id="address-message"></span>
+		<br><br>
+		<label for="date">Date:</label>
+		<input type="date" id="date" value="2023-04-18">
+		<br>
+		<label for="product">Product:</label>
+		<input type="text" id="product">
+		<br>
+		<label for="service">Quantity:</label>
+		<select id="service" onchange="displayPrice()">
+			<option value="none" selected disabled hidden>Select an option</option>
+			<option value="100">100ml</option>
+			<option value="250">250 ml</option>
+			<option value="500">500ml</option>
+		</select>
+		<br>
+		<p style="margin-left: 20px;">Total:</p>
+		<p id="dash">----------------------------------------</p>
+		<p id="price"></p>
+		<p id="dash">----------------------------------------</p>
+		<button type="submit" id="submit" onclick="storeData()">Submit</button>
+		<br><br>
+		</form>
+	</div>
+	
+		</body>
+		</html>

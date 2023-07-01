@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Order Summary</title>
+        <style>
+            body{
+    background-image: url("https://images.unsplash.com/photo-1501436513145-30f24e19fcc8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTU3fHxhZXN0aGV0aWN8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    }
+    </style>
+    </head>
+    <link rel="stylesheet" href="style.css">
+<body id="order_sum">
+
+
+<form style="padding:10px;background-color: white;opacity:0.8;width:500px;position: relative;left: 350px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;border-radius: 5%;" >
+    <h1 style="margin-top: 20px;" >Order succesfully placed!</h1>
+<br>
+<br>
+<p><b>Ordered By: </b><span id="fname"></span></p><br>
+<p><b>Email ID: </b><span id="email"></span></p><br>
+<p><b>Contact no: </b><span id="mobile"></span> </p><br>
+<p id="add"><b>Delivery Address:<br> </b><span id="address"></span></p><br>
+<p><b>Order date: </b><span id="date"></span></p><br>
+<p><b>Product Ordered: </b><span id="product"></span></p><br>
+<p id="deliver"><i>YOUR ORDER WILL BE DELIVERED IN 5-8 BUSINESS DAYS</i></p>
+</form>
+<video id="reminder_vid" autoplay muted loop>
+    <source src="reminder.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+  </video>
+  <button style="position: relative;right: 200px;background-color: aqua;position: relative;right: 240px;height:50px;width:100px;opacity: 0.8;"><a href="ad.html" style="text-decoration: none;color: black;">Come Back!</a> </button>
+<script>
+document.getElementById("fname").innerText = sessionStorage.getItem("fname");
+document.getElementById("email").innerText = sessionStorage.getItem("email");
+document.getElementById("mobile").innerText = sessionStorage.getItem("mobile");
+document.getElementById("address").innerText = sessionStorage.getItem("address");
+document.getElementById("date").innerText = sessionStorage.getItem("date");
+document.getElementById("product").innerText = sessionStorage.getItem("product");
+</script>
+
+
+</body>
+</html>

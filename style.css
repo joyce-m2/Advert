@@ -1,0 +1,125 @@
+#background_video{
+    position:fixed;
+    width: auto;
+    height: auto;
+}
+.signup{
+    position:relative;
+    top:-100px;
+    left:300px;
+    padding: 10px;
+    line-height: 50px;
+    font-size:20px;
+    color:white;
+}
+label{
+    margin-left: 20px;
+}
+input{
+    margin-left: 20px;
+    height:30px;
+    width:60%;
+    border-radius:10px;
+
+}
+*{
+    margin:0;
+}
+button{
+    width:94px;
+    height:44px;
+    border-radius: 10px;
+    background-color: lightgreen;
+    margin-top:20px;
+    font-size:20px;
+}
+
+
+h3{
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 500;
+    font-size: 30px;
+    text-align: center;
+    background-color: #f2f2f2;
+    padding: 15px;
+    opacity: 0.8;
+    box-sizing: border-box;
+    position: relative;
+    top:10px;
+}
+h5{
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 500;
+    font-size: 15px;
+    text-align: center;
+    color: #ffffff;
+    padding:10px;
+    background-color: black;
+    height: 15px;
+    width:250px;
+    border-radius: 50%;
+    position: relative;
+    top:10px;
+    opacity: 0.8;
+    left:500px;
+}
+#sign{
+    padding:10px;
+    background-color: black;
+    opacity: 0.8;
+    border-radius: 5%;
+    width:600px;
+
+    position:relative;
+top:130px;
+}
+#lname2{
+    top:20px;
+    left:20px;
+}
+#address{
+    width:300px;
+    height:30px;
+}
+#date{
+    width:100px;
+}
+#price{
+    margin-left: 20px;
+    padding: 5px;
+    background-color:none;
+    width:100px;
+    color: rgb(255, 255, 255);
+    border-radius: 5%;
+    position: relative;
+    top:-20px;
+}
+#submit{
+    margin-left: 260px;
+}
+#dash{
+    font-size: 20px;
+    letter-spacing: 8px;
+    margin-left: 10px;
+    position: relative;
+    top:-20px;
+}
+#service{
+    font-size: 18px;
+}
+#order_sum{
+    padding: 10px;
+    text-align: center;
+}
+#deliver{
+    font-size: 10px;
+}
+#reminder_vid{
+    height:600px;
+    width:500px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left:45px;
+    
+}
