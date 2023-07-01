@@ -7,4 +7,4 @@ This was my first ever ad page, which included, html, css, and javascript with f
 
 I even used an online AI tool to convert from text to speech, in order to use it as audio reviews of the sunscreen product from our costumers.
 
-In order to see the page for yourself, just download the codes and the media files such as the videos, audios and the images. Just upload the code on your preferred IDE, and you can run it for yourself. 
+In order to see the page for yourself, just download the codes and the media files such as the videos, audios and the images. Just upload the code on your preferred IDE, and you can run it for yourself. I used Visual Studio Code, but you can use any IDE of your choice.
